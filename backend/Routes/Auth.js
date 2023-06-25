@@ -114,7 +114,8 @@ router.post("/getlocation", async (req, res) => {
           lat +
           "+" +
           long +
-          "&key=74c89b3be64946ac96d777d08b878d43"
+          `&key=${process.env.KEY}`
+        
       )
       .then(async (res) => {
         console.log(res.data.results);
