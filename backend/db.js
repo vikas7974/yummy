@@ -1,6 +1,6 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
-const mongoURI =
-  "mongodb+srv://gofood:mid2@food.dxiwaoz.mongodb.net/foodmern?retryWrites=true&w=majority";
+const mongoURI =process.env.mongoURI
 module.exports = function (callback) {
   mongoose.connect(mongoURI, { useNewUrlParser: true }, async (err, result) => {
     if (err) console.log("---" + err);
